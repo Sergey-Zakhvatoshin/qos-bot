@@ -1,9 +1,13 @@
 import { useEffect } from 'react';
 import './PriceList.css';
+import manicureImg from '../assets/images/manicure.webp';
+import pedicureImg from '../assets/images/pedicure.webp';
+import eyelashImg from '../assets/images/eyelash.webp';
 
 const priceData = {
   manicure: {
     title: 'Manicure Services',
+    image: manicureImg,
     items: [
       {
         name: 'Classic Manicure',
@@ -34,6 +38,7 @@ const priceData = {
   },
   pedicure: {
     title: 'Pedicure Services',
+    image: pedicureImg,
     items: [
       {
         name: 'Classic Pedicure',
@@ -64,6 +69,7 @@ const priceData = {
   },
   lashes: {
     title: 'Lash Extensions',
+    image: eyelashImg,
     items: [
       {
         name: 'Classic Lash Extensions',
@@ -135,6 +141,13 @@ function PriceList() {
           id={category}
         >
           <h2 className="price-list__category-title">{data.title}</h2>
+          {data.image && (
+            <img
+              src={data.image}
+              alt={data.title}
+              className="price-list__category-image"
+            />
+          )}
           <div className="price-list__items">
             {data.items.map((item, index) => (
               <div
