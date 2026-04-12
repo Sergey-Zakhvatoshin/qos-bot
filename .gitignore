@@ -28,6 +28,9 @@ miniapp/node_modules/
 miniapp/dist/
 miniapp/.vite/
 
+# Build output
+dist/
+
 # IDE
 .vscode/
 .idea/

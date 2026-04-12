@@ -1,6 +1,6 @@
 # QoS — Telegram Beauty Appointment Bot
 
-A Telegram bot for booking beauty salon appointments, featuring integrated Mini Apps, automated reminders, and a client feedback system.
+A Telegram bot for booking beauty salon appointments, featuring integrated Mini Apps, automated reminders, and a client feedback system. Similar architecture and logic can be applied to other businesses that involve customer service and services.
 
 ## Features
 
@@ -30,7 +30,7 @@ A Telegram bot for booking beauty salon appointments, featuring integrated Mini 
 | Layer | Technology |
 |-------|------------|
 | **Bot Framework** | Python 3, aiogram 3.x |
-| **Mini App Frontend** | React 18, Vite |
+| **Mini App Frontend** | React 18, TypeScript, Vite |
 | **Database** | SQLite3 |
 | **Task Scheduling** | asyncio (built-in) |
 | **Deployment** | GitHub Pages (Mini App), any Python host (Bot) |
@@ -60,14 +60,14 @@ qos/
 ├── models/                 # Database layer (SQLite3)
 │   └── __init__.py
 │
-└── miniapp/                # React Mini App (Vite + React)
+└── miniapp/                # React Mini App (Vite + React + TypeScript)
     ├── src/
     │   ├── components/         # PriceList, Reviews
-    │   ├── App.jsx
-    │   └── main.jsx
+    │   ├── App.tsx
+    │   └── main.tsx
     ├── index.html
     ├── package.json
-    └── vite.config.js
+    └── vite.config.ts
 ```
 
 ## Getting Started
